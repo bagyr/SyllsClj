@@ -10,4 +10,6 @@
 
 (deftest testString
   (testing "Single line parsing"
-    (is (= (procString "a. a. a.") '("a" "a" "a")))))
+    (is (= (procString "a. a. a.") '("a." "a." "a.")))
+    )
+  )

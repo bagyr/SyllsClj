@@ -10,9 +10,21 @@
 ; (defn sent? [text]
 ;   )
 
-(defn procString [str]
-  (let [sent (string/split str #"(?<=[.,;])")]
-    (map string/trim sent)
+(defn procString
+  ([text]
+    (let [sent (string/split text #"(?<=[.,;])")]
+      (map string/trim sent)
+      )
+    )
+  ([text dnf]
+    (let [sent (string/split text #"(?<=[.,;])")
+          prepSent (map string/trim sent)]
+      (cons
+        (str dnf
+          (first prepSent))
+        (rest prepSent)
+        )
+      )
     )
   )
 

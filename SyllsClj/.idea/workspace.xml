@@ -68,7 +68,7 @@
           <file leaf-file-name="core_test.clj" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/SyllsClj/core_test.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="0" selection-start="326" selection-end="326" vertical-scroll-proportion="0.45102042">
+                <state line="13" column="3" selection-start="330" selection-end="330" vertical-scroll-proportion="0.45102042">
                   <folding />
                 </state>
               </provider>
@@ -90,7 +90,7 @@
           <file leaf-file-name="file.clj" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/SyllsClj/file.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="43" selection-start="249" selection-end="249" vertical-scroll-proportion="0.45102042">
+                <state line="19" column="33" selection-start="350" selection-end="350" vertical-scroll-proportion="0.6183674">
                   <folding />
                 </state>
               </provider>
@@ -564,14 +564,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/SyllsClj/core_test.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="326" selection-end="326" vertical-scroll-proportion="0.45102042">
+        <state line="13" column="3" selection-start="330" selection-end="330" vertical-scroll-proportion="0.45102042">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SyllsClj/file.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="43" selection-start="249" selection-end="249" vertical-scroll-proportion="0.45102042">
+        <state line="19" column="33" selection-start="350" selection-end="350" vertical-scroll-proportion="0.6183674">
           <folding />
         </state>
       </provider>
