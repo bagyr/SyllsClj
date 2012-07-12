@@ -4,40 +4,30 @@
     [clojure.java.io :as io]
     [clojure.string :as string]))
 
-; (defn sent-seq [text]
-;   )
-
-; (defn sent? [text]
-;   )
-
 (defn procString
   ([text]
     (let [sent (string/split text #"(?<=[.,;])")]
-      (map string/trim sent)
-      )
-    )
+      (map string/trim sent)))
   ([text dnf]
     (let [sent (string/split text #"(?<=[.,;])")
           prepSent (map string/trim sent)]
       (cons
         (str dnf
           (first prepSent))
-        (rest prepSent)
-        )
-      )
-    )
-  )
+        (rest prepSent)))))
 
 (defn readFile [file]
   (with-open [rdr (io/reader file)]
-    (let [out ()]
+    (let [out (ref '())
+          dnf (ref '"")
+          sents (ref '())]
       (doseq [line (line-seq rdr)]
-          (procString line)
-          )
-      )
-    )
-  )
-
-; (defn readSent [text]
-  
-;   )
+        (println line)
+        (dosync
+          (if (= @dnf "")
+            (alter sents conj (procString line))
+            (alter sents conj (procString line dnf))))
+;          (if (re-find #"[.!?]$" (last @sents))
+;            (ref-set dnf "")
+;            (ref-set dnf (last @sents)))))
+      @sents))))
