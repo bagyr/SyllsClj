@@ -30,4 +30,4 @@
 ;          (if (re-find #"[.!?]$" (last @sents))
 ;            (ref-set dnf "")
 ;            (ref-set dnf (last @sents)))))
-      @sents))))
+      )@sents)))
