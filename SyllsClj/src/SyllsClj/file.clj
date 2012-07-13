@@ -12,7 +12,7 @@
     (let [sent (string/split text #"(?<=[.,;])")
           prepSent (map string/trim sent)]
       (cons
-        (str dnf
+        (str dnf " "
           (first prepSent))
         (rest prepSent)))))
 
@@ -25,9 +25,7 @@
         (dosync
           (if (= @dnf "")
             (alter sents concat (procString line))
-            (alter sents concat (procString line @dnf))))
-        (info "Found: " @sents)
-        (info "DNF: " @dnf)
+            (alter sents #(concat (drop-last %1) %2) (procString line @dnf))))
         (dosync
           (if (re-find #"[.!?]$" (last @sents))
             (ref-set dnf "")
