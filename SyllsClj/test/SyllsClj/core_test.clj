@@ -15,5 +15,5 @@
 
 (deftest testFile
   (testing "File parse"
-    (is (= (readFile "test1.txt") '("asd. fgh. qwe.")))
-    (is (= (readFile "test2.txt") '("asd. fghqwe.")))))
+    (is (= (readFile "test1.txt") '("asd." "fgh." "qwe.")))
+    (is (= (readFile "test2.txt") '("asd." "fghqwe.")))))

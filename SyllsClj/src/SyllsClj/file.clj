@@ -1,8 +1,8 @@
 (ns SyllsClj.file
-  (:require 
-    [SyllsClj.core :as core]
-    [clojure.java.io :as io]
-    [clojure.string :as string]))
+  (:require [SyllsClj.core :as core]
+            [clojure.java.io :as io]
+            [clojure.string :as string])
+  (:use [clojure.tools.logging :only (info)]))
 
 (defn procString
   ([text]
@@ -22,12 +22,14 @@
           dnf (ref '"")
           sents (ref '())]
       (doseq [line (line-seq rdr)]
-        (println line)
         (dosync
           (if (= @dnf "")
-            (alter sents conj (procString line))
-            (alter sents conj (procString line dnf))))
-;          (if (re-find #"[.!?]$" (last @sents))
-;            (ref-set dnf "")
-;            (ref-set dnf (last @sents)))))
-      )@sents)))
+            (alter sents concat (procString line))
+            (alter sents concat (procString line @dnf))))
+        (info "Found: " @sents)
+        (info "DNF: " @dnf)
+        (dosync
+          (if (re-find #"[.!?]$" (last @sents))
+            (ref-set dnf "")
+            (ref-set dnf (last @sents)))))
+      @sents)))
