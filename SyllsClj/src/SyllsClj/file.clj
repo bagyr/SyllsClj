@@ -1,15 +1,15 @@
 (ns SyllsClj.file
   (:require [SyllsClj.core :as core]
             [clojure.java.io :as io]
-            [clojure.string :as string])
-  (:use [clojure.tools.logging :only (info)]))
+            [clojure.string :as string]))
+;  (:use [clojure.tools.logging :only (info)]))
 
 (defn procString
   ([text]
-    (let [sent (string/split text #"(?<=[.,;])")]
+    (let [sent (string/split text #"(?<=[.!?])")]
       (map string/trim sent)))
   ([text dnf]
-    (let [sent (string/split text #"(?<=[.,;])")
+    (let [sent (string/split text #"(?<=[.!?])")
           prepSent (map string/trim sent)]
       (cons
         (str dnf " "

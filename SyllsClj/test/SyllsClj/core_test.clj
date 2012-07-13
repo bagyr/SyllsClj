@@ -1,7 +1,8 @@
 (ns SyllsClj.core-test
   (:use clojure.test
         SyllsClj.core
-        SyllsClj.file))
+        SyllsClj.file)
+  (:require [clojure.pprint :as pprint]))
 
 (deftest syllablesCount
   (testing "Syllables count"
@@ -18,3 +19,9 @@
     (is (= (readFile "test1.txt") '("asd." "fgh." "qwe.")))
     (is (= (readFile "test2.txt") '("asd." "fgh qwe.")))
     (is (= (readFile "test3.txt") '("asd." "fgh jkl qwe.")))))
+
+(deftest bigFile
+  (testing "Big file"
+    (let [a (readFile "prince.txt")]
+      (pprint/pprint (take 10 a))
+      (println (count a)))))
