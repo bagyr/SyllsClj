@@ -38,7 +38,6 @@
     (doseq [sent (readFile file)]
       (let [splited (core/splitSent sent)
             word-sylls (hash-map)]
-        (pp/pprint splited)
         (map #(assoc(word-sylls (keyword %) (core/countSylls %))) splited)
         (cons word-sylls out)))
     out))
