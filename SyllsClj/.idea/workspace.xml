@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cacd2603-0153-4745-9b5b-ee9d1148b7c0" name="Default" comment="Imporoved tests. Fixed errors. Cleanup.">
+    <list default="true" id="cacd2603-0153-4745-9b5b-ee9d1148b7c0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SyllsClj/file.clj" afterPath="$PROJECT_DIR$/src/SyllsClj/file.clj" />
     </list>
     <ignored path="SyllsClj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -696,7 +695,11 @@
       <created>1343051729919</created>
       <updated>1343051729919</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Imporoved tests. Fixed errors. Cleanup.">
+      <created>1343053568993</created>
+      <updated>1343053568993</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
