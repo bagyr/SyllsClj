@@ -10,16 +10,14 @@
         dipthongs 0]
         (-
           (reduce #(+ (count (re-seq (re-pattern %2) prepWord)) %1) syllables vowels)
-          (reduce #(+ (count (re-seq (re-pattern %2) prepWord)) %1) dipthongs dipth )
-          )
-      )
-  )
+          (reduce #(+ (count (re-seq (re-pattern %2) prepWord)) %1) dipthongs dipth ))))
 
 (defn splitSent [sent]
-  (string/split sent #"[\\p{P} \.\!\?\t\n\\r]")
-  )
+  (let [splited (string/split sent #"[\p{P} \.\!\?\t\n\r]")]
+    (->> splited
+      (remove string/blank?)
+      (map string/lower-case))))
 
 (defn procSentence [sent]
   (let [words (splitSent sent)]
-    (map countSylls words))
-  )
+    (map countSylls words)))

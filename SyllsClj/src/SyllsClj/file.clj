@@ -1,7 +1,8 @@
 (ns SyllsClj.file
   (:require [SyllsClj.core :as core]
             [clojure.java.io :as io]
-            [clojure.string :as string]))
+            [clojure.string :as string]
+            [clojure.pprint :as pp]))
 ;  (:use [clojure.tools.logging :only (info)]))
 
 (defn procString
@@ -31,3 +32,13 @@
             (ref-set dnf "")
             (ref-set dnf (last @sents)))))
       @sents)))
+
+(defn procFile [file]
+  (let [out (list)]
+    (doseq [sent (readFile file)]
+      (let [splited (core/splitSent sent)
+            word-sylls (hash-map)]
+        (pp/pprint splited)
+        (map #(assoc(word-sylls (keyword %) (core/countSylls %))) splited)
+        (cons word-sylls out)))
+    out))
