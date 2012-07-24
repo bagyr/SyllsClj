@@ -1,16 +1,19 @@
 (ns SyllsClj.core
   (:require [clojure.string :as string]))
 
-(def vowels '("a" "e" "i" "o" "u"))
-(def dipth  '("ou" "ie" "oi" "oo" "ea" "ae" "ee" "ai" "oy"))
+(def vowels '("a" "e" "i" "o" "u" "y"))
+(def dipth  '("ou" "ie" "oi" "oo" "ea" "ae" "ee" "ai" "oy" "au"))
 
 (defn countSylls [word]
   (let [prepWord (string/lower-case word)
-        syllables 0
-        dipthongs 0]
-        (-
-          (reduce #(+ (count (re-seq (re-pattern %2) prepWord)) %1) syllables vowels)
-          (reduce #(+ (count (re-seq (re-pattern %2) prepWord)) %1) dipthongs dipth ))))
+        nVowels (-
+          (reduce #(+ (count (re-seq (re-pattern %2) prepWord)) %1) 0 vowels)
+          (reduce #(+ (count (re-seq (re-pattern %2) prepWord)) %1) 0 dipth ))]
+    (- nVowels
+      (#(if
+          (and
+            (> nVowels 1)
+            (= (last prepWord) '\e)) 1 0)))))
 
 (defn splitSent [sent]
   (let [splited (string/split sent #"[\p{P} \.\!\?\t\n\r]")]
