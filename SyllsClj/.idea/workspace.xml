@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cacd2603-0153-4745-9b5b-ee9d1148b7c0" name="Default" comment="">
+    <list default="true" id="cacd2603-0153-4745-9b5b-ee9d1148b7c0" name="Default" comment="Fixed">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SyllsClj.iml" afterPath="$PROJECT_DIR$/SyllsClj.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SyllsClj/core.clj" afterPath="$PROJECT_DIR$/src/SyllsClj/core.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SyllsClj/file.clj" afterPath="$PROJECT_DIR$/src/SyllsClj/file.clj" />
     </list>
     <ignored path="SyllsClj.iws" />
@@ -140,7 +138,7 @@
           <file leaf-file-name="file.clj" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/SyllsClj/file.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="29" column="6" selection-start="958" selection-end="958" vertical-scroll-proportion="0.5608646">
+                <state line="34" column="31" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.6575654">
                   <folding />
                 </state>
               </provider>
@@ -714,7 +712,11 @@
       <created>1343131047034</created>
       <updated>1343131047034</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Changed refs to vars.">
+      <created>1343654945583</created>
+      <updated>1343654945583</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -751,6 +753,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="ASM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12135417" sideWeight="0.67132115" order="3" side_tool="false" content_ui="tabs" />
@@ -760,7 +763,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39957035" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -802,7 +804,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Major fixes. New dipthong. Now partially supports silent E." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed refs to vars." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -822,6 +824,7 @@
     <MESSAGE value="Imporoved tests. Fixed errors. Cleanup." />
     <MESSAGE value="Minor fixes." />
     <MESSAGE value="Major fixes. New dipthong. Now partially supports silent E." />
+    <MESSAGE value="Changed refs to vars." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -870,7 +873,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SyllsClj/file.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="6" selection-start="958" selection-end="958" vertical-scroll-proportion="0.5608646">
+        <state line="34" column="31" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.6575654">
           <folding />
         </state>
       </provider>

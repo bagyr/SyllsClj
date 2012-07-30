@@ -30,11 +30,7 @@
       @sents)))
 
 (defn procFile [file]
-  (let [out (list)]
+  (with-local-vars [out '()]
     (doseq [sent (readFile file)]
-      (let [splited (core/splitSent sent)
-            word-sylls
-              (reduce #(assoc %1 (keyword %2) (core/countSylls %2)) {} splited)]
-        (pp/pprint word-sylls)
-        (cons word-sylls out)))
-    out))
+      (var-set out (cons (core/procSentence sent) @out)))
+    @out))
