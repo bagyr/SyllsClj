@@ -19,18 +19,14 @@
 
 (defn readFile [file]
   (with-open [rdr (io/reader file)]
-    (let [out (ref '())
-          dnf (ref '"")
-          sents (ref '())]
+    (with-local-vars [out '(), dnf '"", sents '()]
       (doseq [line (line-seq rdr)]
-        (dosync
-          (if (= @dnf "")
-            (alter sents concat (procString line))
-            (alter sents #(concat (drop-last %1) %2) (procString line @dnf))))
-        (dosync
-          (if (re-find #"[.!?]$" (last @sents))
-            (ref-set dnf "")
-            (ref-set dnf (last @sents)))))
+        (if (= @dnf "")
+          (var-set sents (concat @sents (procString line)))
+          (var-set sents (#(concat (drop-last %1) %2) @sents (procString line @dnf))))
+        (if (re-find #"[.!?]$" (last @sents))
+          (var-set dnf '"")
+          (var-set dnf (last @sents))))
       @sents)))
 
 (defn procFile [file]

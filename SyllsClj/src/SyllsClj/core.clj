@@ -11,9 +11,8 @@
           (reduce #(+ (count (re-seq (re-pattern %2) prepWord)) %1) 0 dipth ))]
     (- nVowels
       (#(if
-          (and
-            (> nVowels 1)
-            (= (last prepWord) '\e)) 1 0)))))
+          (and (> nVowels 1) (= (last prepWord) '\e))
+          1 0)))))
 
 (defn splitSent [sent]
   (let [splited (string/split sent #"[\p{P} \.\!\?\t\n\r]")]
