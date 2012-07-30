@@ -30,7 +30,4 @@
       @sents)))
 
 (defn procFile [file]
-  (with-local-vars [out '()]
-    (doseq [sent (readFile file)]
-      (var-set out (cons (core/procSentence sent) @out)))
-    @out))
+    (reduce #(cons (core/procSentence %2) %1) '() (readFile file)))

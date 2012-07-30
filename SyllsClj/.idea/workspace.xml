@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cacd2603-0153-4745-9b5b-ee9d1148b7c0" name="Default" comment="Fixed">
+    <list default="true" id="cacd2603-0153-4745-9b5b-ee9d1148b7c0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SyllsClj/file.clj" afterPath="$PROJECT_DIR$/src/SyllsClj/file.clj" />
     </list>
@@ -138,7 +138,7 @@
           <file leaf-file-name="file.clj" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/SyllsClj/file.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="34" column="31" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.6575654">
+                <state line="32" column="67" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.6188851">
                   <folding />
                 </state>
               </provider>
@@ -716,7 +716,11 @@
       <created>1343654945583</created>
       <updated>1343654945583</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixed procFile">
+      <created>1343656255050</created>
+      <updated>1343656255050</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -804,7 +808,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed refs to vars." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed procFile" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -825,6 +829,7 @@
     <MESSAGE value="Minor fixes." />
     <MESSAGE value="Major fixes. New dipthong. Now partially supports silent E." />
     <MESSAGE value="Changed refs to vars." />
+    <MESSAGE value="Fixed procFile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -873,7 +878,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SyllsClj/file.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="31" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.6575654">
+        <state line="32" column="67" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.6188851">
           <folding />
         </state>
       </provider>
