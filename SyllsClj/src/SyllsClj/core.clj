@@ -23,3 +23,15 @@
 (defn procSentence [sent]
   (let [words (splitSent sent)]
     (map countSylls words)))
+
+(defn prepPattern [pattern]
+  (with-local-vars [acc 0 out '()]
+    (doseq [n pattern]
+      (var-set out (concat @out (list (+ n @acc))))
+      (var-set acc (last @out))
+      (println @out))
+    @out))
+
+;(defn testPattern [src patt]
+;  (with-local-vars [acc 0]
+;    (doseq [n src])))

@@ -26,7 +26,11 @@
       (pp/pprint (take 10 a))
       (println (count a)))))
 
-(deftest procBigFile
-  (testing "Big file processing")
-  (let [out (procFile "prince.txt")]
-    (pp/pprint out)))
+;(deftest procBigFile
+;  (testing "Big file processing")
+;  (let [out (procFile "prince.txt")]
+;    (pp/pprint out)))
+
+(deftest procPattern
+  (testing "Testing pattern prepare")
+  (is (= (prepPattern '(0 1 2 3 4)) '(0 1 2 3 4) )))

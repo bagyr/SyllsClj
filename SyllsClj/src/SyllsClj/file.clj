@@ -19,7 +19,7 @@
 
 (defn readFile [file]
   (with-open [rdr (io/reader file)]
-    (with-local-vars [out '(), dnf '"", sents '()]
+    (with-local-vars [out '() dnf '"" sents '()]
       (doseq [line (line-seq rdr)]
         (if (= @dnf "")
           (var-set sents (concat @sents (procString line)))
@@ -30,4 +30,4 @@
       @sents)))
 
 (defn procFile [file]
-    (reduce #(cons (core/procSentence %2) %1) '() (readFile file)))
+  (reduce #(cons (core/procSentence %2) %1) '() (readFile file)))
