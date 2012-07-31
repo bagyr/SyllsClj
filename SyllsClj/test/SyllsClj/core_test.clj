@@ -33,4 +33,4 @@
 
 (deftest procPattern
   (testing "Testing pattern prepare")
-  (is (= (prepPattern '(0 1 2 3 4)) '(0 1 2 3 4) )))
+  (is (= (prepPattern '(0 1 2 3 4)) '(0 1 3 6 10) )))
